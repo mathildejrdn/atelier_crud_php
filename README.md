@@ -22,14 +22,14 @@ Affichage des utilisateurs :
 
 Insertion d'un nouvel utilisateur :
 
-- [ ] Créer un fichier `form.php` qui contiendra un formulaire HTML destiné à l'ajout d'un nouvel utilisateur.
-- [ ] Dans `index.php`, ajouter un lien vers la page `form.php`.
-- [ ] Créer un fichier `create.php` contenant le traitement du formulaire de `form.php`.
-- [ ] Dans le fichier `create.php`, vérifier la présence de la superglobale `$_POST` qui existe à partir du moment où les données d'un formulaire en `method="POST"` sont envoyées.
-- [ ] Vérifier que les données envoyées existent et ne sont pas vides.
-- [ ] Créer une requête SQL permettant d'ajouter un nouvel utilisateur dans la base de données.
-- [ ] Préparer et exécuter la requête.
-- [ ] Vérifier la présence de nouveaux utilisateurs dans la page `index.php` et/ou en base de données.
+- [x] Créer un fichier `form.php` qui contiendra un formulaire HTML destiné à l'ajout d'un nouvel utilisateur.
+- [x] Dans `index.php`, ajouter un lien vers la page `form.php`.
+- [x] Créer un fichier `create.php` contenant le traitement du formulaire de `form.php`.
+- [x] Dans le fichier `create.php`, vérifier la présence de la superglobale `$_POST` qui existe à partir du moment où les données d'un formulaire en `method="POST"` sont envoyées.
+- [x] Vérifier que les données envoyées existent et ne sont pas vides.
+- [x] Créer une requête SQL permettant d'ajouter un nouvel utilisateur dans la base de données.
+- [x] Préparer et exécuter la requête.
+- [x] Vérifier la présence de nouveaux utilisateurs dans la page `index.php` et/ou en base de données.
 
 Affichage d'une page par utilisateur :
 

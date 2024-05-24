@@ -25,8 +25,11 @@ $query->execute();
 //on récupère maintenant les données de tableau associatif
 $users = $query->fetchAll(PDO::FETCH_ASSOC);
 
-print_r($users);
+// echo "<pre>"; print_r($users);
+// echo "</pre>";
 //pour erwan regarder sans l'option de PDO
+
+
 ?>
 
 
@@ -47,11 +50,27 @@ print_r($users);
             <td>Nom</td>
         </thead>
         <tbody>
-            <tr>
-                <td>0</td>
+            <!-- <tr>
+                 <td>0</td>
                 <td>Jean-luc</td>
-                <td>Mélenchon</td>
-            </tr>
+                <td>Mélenchon</td> 
+            </tr> 
+        Nous n'en avons plus besoin, après avoir ajouté cet utilisateur en HTML pour vérifier nous pouvons le supprimer et uniquement
+    nous baser sur ceux de la BDD-->
+            <?php 
+            // Pour chaque utilisateur qu'on a récupéré dans $users, on affiche une nouvelle ligne dans la table HTML
+            // Chaque utilisateur de table $user sera identifié dans le foreach en tant que $user 
+                foreach($users as $user){
+                    ?>
+                     <tr>  
+                        <td> <?= $user['id'] ?></td> 
+                        <td> <?= $user['first_name'] ?></td> 
+                        <td> <?= $user['last_name'] ?></td> 
+                     </tr> 
+                    <?php
+                }
+            ?>
+            <a href="form.php"/>ajoutez un.e utilisateurice</a>
         </tbody>
     </table>
 </body>
