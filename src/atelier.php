@@ -67,8 +67,9 @@ $users = $query->fetchAll(PDO::FETCH_ASSOC);
                         <td> <?= $user['id'] ?></td> 
                         <td> <?= $user['first_name'] ?></td> 
                         <td> <?= $user['last_name'] ?></td> 
+                        <td> <a href='delete.php?id=<?=$user["id"]?>'>supprimer</a></td>
                         <td> <!--ici nous allons créer un lien menant vers la fiche de chaque utilisateurice-->
-                        <td><a href='user.php?id=<?=$user["id"]?>'>Voir l'utilisateurice</a></td>
+                            <a href='user.php?id=<?=$user["id"]?>'>Voir l'utilisateurice</a></td>
                         </td>
                      </tr> 
                     <?php

@@ -1,6 +1,8 @@
 <?php 
+if (isset($_GET['id']) && !empty($_GET['id'])) //si l'id de l'url existe et est rempli
+ {
 require_once("connect.php");
-echo $_GET["id"];
+// echo $_GET["id"];
 $id = strip_tags($_GET["id"]);
 $sql = "SELECT * FROM users WHERE id = :id";
 //On prépare la requête dans $sql,donc récupérer l'id unique
@@ -14,7 +16,18 @@ $query->execute();
 //besoin d'une seule donnée donc fetch uniquement et non pas fetchAll
 $user = $query->fetch(); 
 //on vérifie avec un print_r
-print_r($user);
+// print_r($user);
+
+//s'il n'y a rien dans $user on redirige vers l'index, on vérifie si l'utilisateur existe dans la BDD
+//!$user est le raccourci de isset $user... il n'y a pas besoin de préciser empty
+if(!$user) {
+    header('Location: atelier.php');
+}  else {   require_once("disconnect.php");
+}
+
+} else { header('Location: atelier.php');
+
+}
 ?>
 
 
