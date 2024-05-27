@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 const DBHOST = 'db';
 const DBNAME = 'atelier_crud';
 const DBUSER = 'test';
@@ -43,6 +45,12 @@ $users = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <h1>Liste des utilisateurices</h1>
+    <?php 
+    if(!empty($_SESSION['message'])){
+echo "<p>" . $_SESSION['message'] . "</p>";
+$_SESSION['message'] = "";
+    }
+    ?>
     <table>
         <thead>
             <td>Id</td>

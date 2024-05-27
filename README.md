@@ -74,6 +74,6 @@ Modification d'un utilisateur
 
 Exemple de gestion de messages d'erreur et de confirmation à l'aide de sessions :
 
-- [ ] Démarrer une session sur la page `create.php` avec `session_start();`
-- [ ] Avant de rediriger vers `index.php` après avoir exécuté la requête SQL, écrire un message dans la session via `$_SESSION['message'] = "Utilisateur ajouté";`
-- [ ] Sur la page `index.php`, dans le HTML, insérer la condition de l'existance de `$_SESSION['message']`. Si un message existe, afficher une <div> contenant le message puis effacer le message avec `$_SESSION['message'] = "";`
+- [x] Démarrer une session sur la page `create.php` avec `session_start();`
+- [x] Avant de rediriger vers `index.php` après avoir exécuté la requête SQL, écrire un message dans la session via `$_SESSION['message'] = "Utilisateur ajouté";`
+- [x] Sur la page `index.php`, dans le HTML, insérer la condition de l'existance de `$_SESSION['message']`. Si un message existe, afficher une <div> contenant le message puis effacer le message avec `$_SESSION['message'] = "";`

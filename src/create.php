@@ -1,4 +1,7 @@
 <?php
+//on démarre une session
+session_start();
+
 if (
     isset($_POST['first_name']) && !empty($_POST['first_name']) &&
     isset($_POST['last_name']) && !empty($_POST['last_name'])
@@ -19,6 +22,9 @@ if (
 
     // Execute the query
     $query->execute();
+
+    //ici on peut stocker
+$_SESSION['message'] = "Utilisateurice ajouté.e";
 
     // Redirect to another page after successful insertion
     header('Location: atelier.php');
